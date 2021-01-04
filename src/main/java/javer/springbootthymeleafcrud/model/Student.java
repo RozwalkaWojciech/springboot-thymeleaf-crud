@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
@@ -25,5 +26,5 @@ public class Student {
     @NotBlank(message = "Email is mandatory")
     private String email;
 
-    private long phoneNumber;
+    private long phoneNo;
 }
