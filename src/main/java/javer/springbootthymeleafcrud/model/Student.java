@@ -17,7 +17,7 @@ public class Student {
 
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
 
     @NotBlank(message = "Name is mandatory")
     private String name;
@@ -25,5 +25,5 @@ public class Student {
     @NotBlank(message = "Email is mandatory")
     private String email;
 
-    private long phoneNo;
+    private String phoneNo;
 }

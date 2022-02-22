@@ -36,7 +36,6 @@ public class StudentController {
         if (result.hasErrors()) {
             return "add-student";
         }
-
         studentRepository.save(student);
         return "redirect:list";
     }
@@ -50,8 +49,7 @@ public class StudentController {
     }
 
     @PostMapping("update/{id}")
-    public String updateStudent(@PathVariable("id") long id, @Valid Student student,
-                                BindingResult result, Model model) {
+    public String updateStudent(@PathVariable("id") long id, @Valid Student student, BindingResult result, Model model) {
         if (result.hasErrors()) {
             student.setId(id);
             return "update-student";
